@@ -1,5 +1,6 @@
 /** Takes two arrays and returns the elements present is both arrays
  *  It does not change both parameters and returns a new array.
+ *  Eliminates repetition
  * 
  * Takes O(n^2) time.
  */
@@ -12,5 +13,5 @@ function commonElements(arr1, arr2) {
       newArr.push(i);
   }
   
-  return newArr;
+  return Array.from(new Set(newArr));
 }
